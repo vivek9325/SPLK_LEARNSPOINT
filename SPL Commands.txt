@@ -25,3 +25,14 @@ index=_audit | table action, path,size | sort - size
 Dedup Command
 
 index=_audit | table action, path,size| dedup action
+
+
+Stats Command----
+
+index=_audit | stats count by action
+
+index=_audit | stats count
+
+
+
+

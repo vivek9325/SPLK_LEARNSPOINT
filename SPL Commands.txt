@@ -8,7 +8,18 @@ index=_audit | table action, path,size| rename action as activity
 
 Sort Command
 
+Ascending Order
+
 index=_audit | table action, path,size | sort size
+
+Descending Order
+
+
+index=_audit | table action, path,size | sort size
+
+
+
+
 
 Dedup Command
 

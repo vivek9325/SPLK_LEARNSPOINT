@@ -86,3 +86,7 @@ index=_internal | rare sourcetype limit=0
 index=_internal | rare sourcetype
 
 
+Chart Command ----
+
+index=_internal | chart count by sourcetype
+

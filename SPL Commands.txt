@@ -50,3 +50,12 @@ values ---
 index=_internal | stats values(source) as unique_source by sourcetype
 
 
+Eval ------
+
+Calculation - 
+
+index=_internal | eval vk_kb = bytes/1024 | table bytes, vk_kb
+
+index=_internal | eval vk_kb = round(bytes/1024,2) | table bytes, vk_kb
+
+index=_internal | eval vk_kb = round(bytes/1024,2)." KB" | table bytes, vk_kb

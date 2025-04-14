@@ -42,3 +42,11 @@ index=_internal | stats sum(bytes) as sum_bytes by sourcetype | fillnull value=N
 index=_internal | stats avg(bytes) as avg_bytes by sourcetype | fillnull value=NULL
 
 
+List ---
+
+index=_internal | stats list(source) as total_source by sourcetype
+
+values ---
+index=_internal | stats values(source) as unique_source by sourcetype
+
+

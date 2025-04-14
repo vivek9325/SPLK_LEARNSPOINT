@@ -90,3 +90,8 @@ Chart Command ----
 
 index=_internal | chart count by sourcetype
 
+Timechart Command - 
+
+index=_internal | timechart span=15m count by sourcetype
+
+index=_internal | timechart count by sourcetype

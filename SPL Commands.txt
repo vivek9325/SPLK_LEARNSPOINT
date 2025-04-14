@@ -1,0 +1,15 @@
+Day - 1
+
+--------------------
+
+Table & Rename Command
+
+index=_audit | table action, path,size| rename action as activity
+
+Sort Command
+
+index=_audit | table action, path,size | sort size
+
+Dedup Command
+
+index=_audit | table action, path,size| dedup action

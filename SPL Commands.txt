@@ -69,3 +69,20 @@ Case statement ----
 
 index=_audit | dedup action | table action | eval status = case(action="search","SEARCH ACTION", action="quota", "Resource", 1=1, "Info")
 
+
+Top / Rare ----
+
+
+index=_internal | top sourcetype limit=5
+
+index=_internal | top sourcetype limit=0
+
+index=_internal | top sourcetype
+
+index=_internal | rare sourcetype limit=5
+
+index=_internal | rare sourcetype limit=0
+
+index=_internal | rare sourcetype
+
+

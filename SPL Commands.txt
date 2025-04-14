@@ -64,3 +64,8 @@ If-else ---
 
 index=_internal| table bytes | sort - bytes | eval status = if(bytes>684988,"high","low")
 
+Case statement ----
+
+
+index=_audit | dedup action | table action | eval status = case(action="search","SEARCH ACTION", action="quota", "Resource", 1=1, "Info")
+

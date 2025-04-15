@@ -100,6 +100,8 @@ index=_internal | timechart count by sourcetype
 
 Sourcetype Custom Rules ---
 
+	EventBreaking Rule ---
+
 [ __auto__learned__ ]
 SHOULD_LINEMERGE=true
 LINE_BREAKER=([\r\n]*)<messages>
@@ -123,4 +125,16 @@ LINE_BREAKER=([\r\n]+)
 NO_BINARY_CHECK=true
 BREAK_ONLY_BEFORE=}]}
 
+	TimeStamp Extraction ---
+
+[ __auto__learned__ ]
+SHOULD_LINEMERGE=true
+LINE_BREAKER=([\r\n]+)
+NO_BINARY_CHECK=true
+BREAK_ONLY_BEFORE=41785
+TIME_PREFIX=GMT
+TIME_FORMAT=%Y-%m-%dT%H:%M:%S.%3N
+TIMESTAMP_LOOKAHEAD=24
+MAX_DAYS_HENCE=15
+MAX_DAYS_AGO=50000
 
